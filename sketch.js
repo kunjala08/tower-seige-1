@@ -11,14 +11,17 @@ var block15,block16,block17,block18,block19,block20;
 var block21,block22,block23,block23,block24,block25;
 
 function preload(){
-polygonImage= loadImage("polygon.png");
+
+ polygonImage= loadImage("polygon.png");
+
 }
 function setup(){
+
   var canvas = createCanvas(900,500);
 
   engine = Engine.create();
   world = engine.world;
-  
+
   polygon = Bodies.circle(100,190,20)
   
 
@@ -44,9 +47,10 @@ function setup(){
 }
 function draw () {
     background(rgb(24,67,25));
-    
+    Engine.update(engine); 
     imageMode(CENTER)
     image(polygonImage,polygon.position.x,polygon.position.y,40,40)
+    
     ground1.display();
    
     block14.display();
