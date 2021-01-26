@@ -1,9 +1,9 @@
 class Box {
     constructor(x, y) {
       var options = {
-        isStatic:true,
+        isStatic:false,
         
-        'friction': 0,
+        'friction': 0.3,
         'restitution':0.2, 
       }
       this.body = Bodies.rectangle(x, y, 25, 50, options);

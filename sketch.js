@@ -9,7 +9,7 @@ var sling;
 var block14;
 var block15,block16,block17,block18,block19,block20;
 var block21,block22,block23,block23,block24,block25;
-
+var ground
 function preload(){
 
  polygonImage= loadImage("polygon.png");
@@ -26,7 +26,7 @@ function setup(){
   
 
   ground1 = new Ground(580,305,170,20);
- 
+  ground = new Ground(450,470,890,20)
   block14 = new Box(520,267)
   block15 = new Box(550,267)
   block16 = new Box(580,267)
@@ -42,7 +42,7 @@ function setup(){
 
   block24 = new Box(579,105)
    
-  sling = new Slingshot(polygon,{x:100,y:100} );
+  sling = new Slingshot(polygon,{x:100,y:176} );
   World.add(world,polygon)
 }
 function draw () {
@@ -52,6 +52,7 @@ function draw () {
     image(polygonImage,polygon.position.x,polygon.position.y,40,40)
     
     ground1.display();
+    ground.display();
    
     block14.display();
     block15.display();
